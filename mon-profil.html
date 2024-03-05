@@ -24,8 +24,8 @@
                         <p class="profile-name">Mohamed Yassine Khabthani</p>   
                         <p class="profile-bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Morbi tristique senectus et netus. Odio eu feugiat pretium nibh.</p>
                         <div class="button-row h-flex-between">
-                            <button class="slikoo-button btn btn-danger"><i class="fa-solid fa-user-plus"></i> Envoyer une demande d'ami(e)</button>
-                            <button class="chat-button btn btn-light"><i class="fa-solid fa-comment"></i></button>
+                            <button class="slikoo-button btn btn-danger"><i class="fa-solid fa-gauge"></i>Accéder au tableau de bord</button>
+                            <button class="chat-button btn btn-light"><i class="fa-solid fa-gear"></i></i></button>
                         </div>
                         <div class="h-flex-between social-media-row"> <a href="#"> <i class="fa-brands fa-facebook-f"></i> </a> <a href="#"> <i class="fa-brands fa-instagram"></i>  </a><a href="#"> <i class="fa-brands fa-x-twitter"></i>  </a><a href="#"> <i class="fa-brands fa-linkedin-in"></i></a> </div>
 
@@ -43,7 +43,20 @@
                             </div>
                             <div id="div-content"class="content">
                                 <!--POSTS DIV-->
+                                    <div class="post-card">
+                                        <div class="h-flex-start">
+                                            <img class="post-avatar" src="avatar.jpg" alt="">
+                                            <textarea class="w-100" type="text" placeholder="Que voulez-vous dire ?"></textarea>
+                                        </div>
+                                        <div class="h-flex-between post-add">
 
+                                                <a href="#" class="grey-link">Ajouter une image</a>
+
+                                            <a href="#" class="red-link">Ajouter une publication</a>
+
+                                        </div>
+
+                                    </div>
                                     <div class="post-card">
                                         <div class="h-flex">
                                             <img  class="post-avatar" src="avatar.jpg" alt="">
@@ -85,38 +98,16 @@
                                         </a>
                                     </div>
                                     </div>
+
                                 <!--MEAL DIV-->
                                 <!--
                                 <div class="row">
                                     <div class="meal-card col-lg-6">
                                         <a  href="#">
-                                            <div class="card bg-dark text-white">
-                                                <img src="meal1.png" class="card-img" alt="meal image"/>
-                                                <div class="card-img-overlay" style="background-color: rgba(0, 0, 0, 0.4)">
-                                                    <div class="v-flex-between h-100">
-                                                        <div class="h-flex-between">
-                                                            <div>                                                        
-                                                                <i class="fa-solid fa-location-dot"></i>
-                                                                <span class="meal-location">Lyon</span>
-                                                            </div>
-                                                            <div>                                                        
-                                                                <i class="fa-solid fa-user-group"></i>
-                                                                <span class="meal-number">5</span>
-                                                            </div>
-                                                        </div>
-                                                        <div class="v-flex">
-                                                            <span class="meal-date">Lun 26 Fev, 14:00</span>
-                                                            <div class="h-flex-between">
-                                                                <span class="meal-title">Dégustation du vin - Le cinéma</span>
-                                                                <div>
-                                                                    <span class="meal-price">25</span>
-                                                                    <i class="fa-solid fa-euro-sign"></i>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-
+                                            <div class="card meal-add">
+                                                <div class="v-flex-center">
+                                                    <i class="fa-solid fa-plus"></i>
+                                                    <span>Ajouter un repas</span>
                                                 </div>
                                               </div>
                                         </a>
@@ -275,8 +266,14 @@
                                             </div>
                                             <p class="info-desc">Ouvert, Homme, Femme</p>
                                         </div>
+                                        <hr>
+                                        <div class="info-edit">
+                                            <div class="h-flex">
+                                                <a href="#" class="red-link"><i class="fa-solid fa-pen-to-square"></i>Modifier mes informations</a>
+                                            </div>
+                                        </div>
                                 </div>
-                                -->
+                            -->
                             </div>
                         </div>
                         <div class="col-lg-4">
@@ -298,7 +295,8 @@
                                             <a href="#" class="btn friends-show-option"><i class="fa-solid fa-chevron-down"></i></a>
                                             <div class="dropdown-content">
                                                 <a href="#"><i class="fa-solid fa-user"></i>Voir le profil</a>
-                                                <a href="#"><i class="fa-solid fa-user-plus"></i>Envoyer une demande d'ajout d'ami(e)</a>
+                                                <a href="#"><i class="fa-solid fa-envelope"></i>Inviter à un repas</a>
+                                                <a href="#"><i class="fa-solid fa-user-xmark"></i>Retirer de la liste d'amis</a>
                                               </div>    
                                         </div>                                    </div>
                                     <hr>
@@ -311,7 +309,8 @@
                                             <a href="#" class="btn friends-show-option"><i class="fa-solid fa-chevron-down"></i></a>
                                             <div class="dropdown-content">
                                                 <a href="#"><i class="fa-solid fa-user"></i>Voir le profil</a>
-                                                <a href="#"><i class="fa-solid fa-user-plus"></i>Envoyer une demande d'ajout d'ami(e)</a>
+                                                <a href="#"><i class="fa-solid fa-envelope"></i>Inviter à un repas</a>
+                                                <a href="#"><i class="fa-solid fa-user-xmark"></i>Retirer de la liste d'amis</a>
                                               </div>    
                                         </div>                                    </div>
                                 </div>
@@ -380,14 +379,14 @@
           
             // define the function to change the HTML content
             function changeContentPost() {
-                divContent.innerHTML = '<div class="post-card"> <div class="h-flex"><img  class="post-avatar" src="avatar.jpg" alt=""><div><p class="post-owner">Mohamed Yassine Khabthani</p><p class="post-time">Il y a 10 heures</p></div></div><p class="post-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</p><div class="h-flex"><a href="#" class="like-button"><i class="fa-solid fa-heart"></i><span>4</span></a><a href="#" class="comment-button"><i class="fa-solid fa-comment"></i><span>4</span></a></div></div><div class="post-card"><div class="h-flex"><img class="post-avatar" src="avatar.jpg" alt=""><div><p class="post-owner">Mohamed Yassine Khabthani</p><p class="post-time">Il y a 10 heures</p></div></div><p class="post-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</p><img src="post-image.png" class="img-fluid post-img" alt="post image"/><div class="h-flex"><a href="#" class="like-button"><i class="fa-solid fa-heart"></i><span>4</span></a><a href="#" class="comment-button"><i class="fa-solid fa-comment"></i><span>4</span></a></div></div>';
+                divContent.innerHTML = '<div class=post-card><div class=h-flex-start><img alt=""class=post-avatar src=avatar.jpg> <textarea class=w-100 placeholder="Que voulez-vous dire ?"type=text></textarea></div><div class="h-flex-between post-add"><a class=grey-link href=#>Ajouter une image</a> <a class=red-link href=#>Ajouter une publication</a></div></div><div class=post-card><div class=h-flex><img alt=""class=post-avatar src=avatar.jpg><div><p class=post-owner>Mohamed Yassine Khabthani<p class=post-time>Il y a 10 heures</div></div><p class=post-content>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.<div class=h-flex><a class=like-button href=#><i class="fa-solid fa-heart"></i> <span>4</span> </a><a class=comment-button href=#><i class="fa-solid fa-comment"></i> <span>4</span></a></div></div><div class=post-card><div class=h-flex><img alt=""class=post-avatar src=avatar.jpg><div><p class=post-owner>Mohamed Yassine Khabthani<p class=post-time>Il y a 10 heures</div></div><p class=post-content>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</p><img alt="post image"class="img-fluid post-img"src=post-image.png><div class=h-flex><a class=like-button href=#><i class="fa-solid fa-heart"></i> <span>4</span> </a><a class=comment-button href=#><i class="fa-solid fa-comment"></i> <span>4</span></a></div></div>';
             }
             // define the function to change the HTML content
             function changeContentMeal() {
-                divContent.innerHTML = '<div class=row><div class="col-lg-6 meal-card"><a href=#><div class="bg-dark card text-white"><img alt="meal image"class=card-img src=meal1.png><div class=card-img-overlay style=background-color:rgba(0,0,0,.4)><div class="h-100 v-flex-between"><div class=h-flex-between><div><i class="fa-solid fa-location-dot"></i> <span class=meal-location>Lyon</span></div><div><i class="fa-solid fa-user-group"></i> <span class=meal-number>5</span></div></div><div class=v-flex><span class=meal-date>Lun 26 Fev, 14:00</span><div class=h-flex-between><span class=meal-title>Dégustation du vin - Le cinéma</span><div><span class=meal-price>25</span> <i class="fa-solid fa-euro-sign"></i></div></div></div></div></div></div></a></div><div class="col-lg-6 meal-card"><a href=#><div class="bg-dark card text-white"><img alt="meal image"class=card-img src=meal2.png><div class=card-img-overlay style=background-color:rgba(0,0,0,.4)><div class="h-100 v-flex-between"><div class=h-flex-between><div><i class="fa-solid fa-location-dot"></i> <span class=meal-location>Lyon</span></div><div><i class="fa-solid fa-user-group"></i> <span class=meal-number>5</span></div></div><div class=v-flex><span class=meal-date>Lun 26 Fev, 14:00</span><div class=h-flex-between><span class=meal-title>Dégustation du vin - Le cinéma</span><div><span class=meal-price>25</span> <i class="fa-solid fa-euro-sign"></i></div></div></div></div></div></div></a></div><div class="col-lg-6 meal-card"><a href=#><div class="bg-dark card text-white"><img alt="meal image"class=card-img src=meal3.png><div class=card-img-overlay style=background-color:rgba(0,0,0,.4)><div class="h-100 v-flex-between"><div class=h-flex-between><div><i class="fa-solid fa-location-dot"></i> <span class=meal-location>Lyon</span></div><div><i class="fa-solid fa-user-group"></i> <span class=meal-number>5</span></div></div><div class=v-flex><span class=meal-date>Lun 26 Fev, 14:00</span><div class=h-flex-between><span class=meal-title>Dégustation du vin - Le cinéma</span><div><span class=meal-price>25</span> <i class="fa-solid fa-euro-sign"></i></div></div></div></div></div></div></a></div><div class="col-lg-6 meal-card"><a href=#><div class="bg-dark card text-white"><img alt="meal image"class=card-img src=meal4.png><div class=card-img-overlay style=background-color:rgba(0,0,0,.4)><div class="h-100 v-flex-between"><div class=h-flex-between><div><i class="fa-solid fa-location-dot"></i> <span class=meal-location>Lyon</span></div><div><i class="fa-solid fa-user-group"></i> <span class=meal-number>5</span></div></div><div class=v-flex><span class=meal-date>Lun 26 Fev, 14:00</span><div class=h-flex-between><span class=meal-title>Dégustation du vin - Le cinéma</span><div><span class=meal-price>25</span> <i class="fa-solid fa-euro-sign"></i></div></div></div></div></div></div></a></div></div>';
+                divContent.innerHTML = '<div class=row><div class="col-lg-6 meal-card"><a href=#><div class="card meal-add"><div class=v-flex-center><i class="fa-solid fa-plus"></i> <span>Ajouter un repas</span></div></div></a></div><div class="col-lg-6 meal-card"><a href=#><div class="card bg-dark text-white"><img alt="meal image"class=card-img src=meal2.png><div class=card-img-overlay style=background-color:rgba(0,0,0,.4)><div class="h-100 v-flex-between"><div class=h-flex-between><div><i class="fa-solid fa-location-dot"></i> <span class=meal-location>Lyon</span></div><div><i class="fa-solid fa-user-group"></i> <span class=meal-number>5</span></div></div><div class=v-flex><span class=meal-date>Lun 26 Fev, 14:00</span><div class=h-flex-between><span class=meal-title>Dégustation du vin - Le cinéma</span><div><span class=meal-price>25</span> <i class="fa-solid fa-euro-sign"></i></div></div></div></div></div></div></a></div><div class="col-lg-6 meal-card"><a href=#><div class="card bg-dark text-white"><img alt="meal image"class=card-img src=meal3.png><div class=card-img-overlay style=background-color:rgba(0,0,0,.4)><div class="h-100 v-flex-between"><div class=h-flex-between><div><i class="fa-solid fa-location-dot"></i> <span class=meal-location>Lyon</span></div><div><i class="fa-solid fa-user-group"></i> <span class=meal-number>5</span></div></div><div class=v-flex><span class=meal-date>Lun 26 Fev, 14:00</span><div class=h-flex-between><span class=meal-title>Dégustation du vin - Le cinéma</span><div><span class=meal-price>25</span> <i class="fa-solid fa-euro-sign"></i></div></div></div></div></div></div></a></div><div class="col-lg-6 meal-card"><a href=#><div class="card bg-dark text-white"><img alt="meal image"class=card-img src=meal4.png><div class=card-img-overlay style=background-color:rgba(0,0,0,.4)><div class="h-100 v-flex-between"><div class=h-flex-between><div><i class="fa-solid fa-location-dot"></i> <span class=meal-location>Lyon</span></div><div><i class="fa-solid fa-user-group"></i> <span class=meal-number>5</span></div></div><div class=v-flex><span class=meal-date>Lun 26 Fev, 14:00</span><div class=h-flex-between><span class=meal-title>Dégustation du vin - Le cinéma</span><div><span class=meal-price>25</span> <i class="fa-solid fa-euro-sign"></i></div></div></div></div></div></div></a></div></div>';
             }            // define the function to change the HTML content
             function changeContentInfo() {
-                divContent.innerHTML = '<div class=info-div><div class=info-row><div class=h-flex-center><i class="fa-solid fa-utensils"></i> <span class=info-title>Allergies Alimentaires</span></div><p class=info-desc>Noix (Amandes, Noix de cajou, Noisettes, Noix du brésil, Pistaches, Macadamias, Etc.)</div><div class=info-row><div class=h-flex-center><i class="fa-solid fa-heart"></i> <span class=info-title>Centres d"intérêt</span></div><p class=info-desc>Musique: Ècouter de la musique, jouer d"un instrument de musique, Chanter, Assister à des concerts, Etc.<br>Art: Peinture, sculpture, Dessin, Photographie</div><div class=info-row><div class=h-flex-center><i class="fa-solid fa-language"></i> <span class=info-title>Langues</span></div><p class=info-desc>Français, Anglais, Italien, Espagnole, Chinois</div><div class=info-row><div class=h-flex><div class=h-flex-center><i class="fa-solid fa-smoking"></i> <span class=info-title>Fumeur</span><p class=info-desc>Oui</div><div class=h-flex-center><i class="fa-solid fa-wine-glass"></i> <span class=info-title>Alcohol</span><p class=info-desc>Oui</div></div></div><div class=info-row><div class=h-flex-center><i class="fa-solid fa-magnifying-glass"></i> <span class=info-title>Cherche Plus</span></div><p class=info-desc>Rencontre, Dates</div><div class=info-row><div class=h-flex-center><i class="fa-solid fa-user-group"></i> <span class=info-title>Genre recherché</span></div><p class=info-desc>Ouvert, Homme, Femme</div></div>';
+                divContent.innerHTML = '<div class=info-div><div class=info-row><div class=h-flex-center><i class="fa-solid fa-utensils"></i> <span class=info-title>Allergies Alimentaires</span></div><p class=info-desc>Noix (Amandes, Noix de cajou, Noisettes, Noix du brésil, Pistaches, Macadamias, Etc.)</div><div class=info-row><div class=h-flex-center><i class="fa-solid fa-heart"></i> <span class=info-title>Centres d"intérêt</span></div><p class=info-desc>Musique: Ècouter de la musique, jouer d"un instrument de musique, Chanter, Assister à des concerts, Etc.<br>Art: Peinture, sculpture, Dessin, Photographie</div><div class=info-row><div class=h-flex-center><i class="fa-solid fa-language"></i> <span class=info-title>Langues</span></div><p class=info-desc>Français, Anglais, Italien, Espagnole, Chinois</div><div class=info-row><div class=h-flex><div class=h-flex-center><i class="fa-solid fa-smoking"></i> <span class=info-title>Fumeur</span><p class=info-desc>Oui</div><div class=h-flex-center><i class="fa-solid fa-wine-glass"></i> <span class=info-title>Alcohol</span><p class=info-desc>Oui</div></div></div><div class=info-row><div class=h-flex-center><i class="fa-solid fa-magnifying-glass"></i> <span class=info-title>Cherche Plus</span></div><p class=info-desc>Rencontre, Dates</div><div class=info-row><div class=h-flex-center><i class="fa-solid fa-user-group"></i> <span class=info-title>Genre recherché</span></div><p class=info-desc>Ouvert, Homme, Femme</div><hr><div class=info-edit><div class=h-flex><a class=red-link href=#><i class="fa-solid fa-pen-to-square"></i>Modifier mes informations</a></div></div></div>';
             }
             postButton.addEventListener('click', changeContentPost);
             mealButton.addEventListener('click', changeContentMeal);
