@@ -16,7 +16,7 @@
     </div>
     <section class="slikoo-chat">
             <div class="row">
-                <div class="col-lg-3">
+                <div id="messagesColumn" class="col-lg-3 col-md-3 col-sm-3 col-4">
                     <div class="messages-column background-white">
 
                     <div class="messages-title">
@@ -171,7 +171,7 @@
 
                 </div>
                 </div>
-                <div class="col-lg-6">
+                <div id="chatBox" class="col-lg-6 col-md-9 col-sm-9 col-8">
                 <div class="messages-column">
                     <div class="chatbox">
                         <div class="chatbox-title background-white">
@@ -180,7 +180,7 @@
                                     <img src="avatar.jpg" alt="avatar img">
                                     <h6>Mohamed Yassine Khabthani</h6>
                                 </div>
-                                <a href="#" class="grey-link"><i class="fa-solid fa-ellipsis-vertical"></i></a>
+                                <a href="#" class="grey-link" id="collapseDetails"><i class="fa-solid fa-ellipsis-vertical"></i></a>
                                                     
                             </div>
                         </div>
@@ -257,21 +257,107 @@
 
                 </div>
                 </div>
-                <div class="col-lg-3">
+                <div id="detailsColumn" class="col-lg-3 col-md-0 col-sm-0 col-0">
                 <div class="messages-column background-white">
                 
                     <div class="details-title">
-                        <div class="h-flex">
-                            <a href="#" class="grey-link"><h6>Details du repas</h6></a>
-                            <a href="#" class="grey-link"><h6>Details de l'utlisateur</h6></a>
+                        <div class="h-flex-between">
+
+                        <div class="h-flex" id="link-container">
+                            <a class="grey-link active-grey-link" id="detailsRepas"><h6>Details du repas</h6></a>
+                            <a class="grey-link" id="detailsUser"><h6>Details de l'utlisateur</h6></a>
                               
                         </div>
-                    </div>
-                    <div class="details-content">
-                        aaa
-                    </div>
-                    <div class="details-bottom">
+                        <a href="#messagesColumn" class="grey-link" id="goUp"><i class="fa-solid fa-circle-arrow-up fa-xl"></i></a>
 
+                    </div>
+
+                    </div>
+                    <div id="detailsContent" class="details-content">
+                        
+                        <div class="v-flex">
+                            <span class="meal-time">Lun 26 Fev, 14:00 - Lyon</span>
+                            <h6 class="meal-type">Dégustation du vin - Le cinéma</h6>
+                            <span ><span class="meal-genre">Famille</span> - <span class="meal-type">Halal</span> </span>
+                            <img class="meal-image" src="meal1.png" alt="image du repas">
+                            <div class="h-flex-between">
+                                <span>Il reste encore <span class="meal-count"> 4 </span>places.</span>
+                                <span class="meal-price">20€</span>
+                            </div>
+                            <h6>Description du repas</h6>
+                            <p class="meal-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Justo eget magna fermentum iaculis eu. In nisl nisi scelerisque eu ultrices. Magna fermentum iaculis eu non diam phasellus vestibulum lorem. Auctor augue mauris augue neque gravida. Enim nunc faucibus a pellentesque.</p>
+                        </div>
+                        
+                        <!--
+                        <div class="v-flex-center">
+                            <span>Mohamed Yassine Khabthani</span>
+                            <img class="user-pic" src="avatar.jpg" alt="Image de l'utilisateur">
+                            <div class="review-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                            <div class="h-flex-between social-media-row"> <a href="#"> <i class="fa-brands fa-facebook-f"></i> </a> <a href="#"> <i class="fa-brands fa-instagram"></i>  </a><a href="#"> <i class="fa-brands fa-x-twitter"></i>  </a><a href="#"> <i class="fa-brands fa-linkedin-in"></i></a> </div>
+                        </div>
+                        <hr>
+                        <h6>Profil avancé</h6>
+                        <div class="info-div">
+                            <div class="info-row">
+                                <div class="h-flex-center">
+                                    <i class="fa-solid fa-utensils"></i>
+                                    <span class="info-title">Allergies Alimentaires</span>
+                                </div>
+                                <p class="info-desc">Noix (Amandes, Noix de cajou, Noisettes, Noix du brésil, Pistaches, Macadamias, Etc.)</p>
+                            </div>
+                            <div class="info-row">
+                                <div class="h-flex-center">
+                                    <i class="fa-solid fa-heart"></i>
+                                    <span class="info-title">Centres d'intérêt</span>
+                                </div>
+                                <p class="info-desc">Musique: Ècouter de la musique, jouer d'un instrument de musique, Chanter, Assister à des concerts, Etc.<br>
+                                    Art: Peinture, sculpture, Dessin, Photographie</p>
+                            </div>
+                            <div class="info-row">
+                                <div class="h-flex-center">
+                                    <i class="fa-solid fa-language"></i>
+                                    <span class="info-title">Langues</span>
+                                </div>
+                                <p class="info-desc">Français, Anglais, Italien, Espagnole, Chinois</p>
+                            </div>
+                            <div class="info-row">
+                                <div class="h-flex">
+                                    <div class="h-flex-center">
+                                        <i class="fa-solid fa-smoking"></i>
+                                        <span class="info-title">Fumeur</span>
+                                        <p class="info-desc">Oui</p>
+                                    </div>
+                                    <div class="h-flex-center">
+                                        <i class="fa-solid fa-wine-glass"></i>
+                                        <span class="info-title">Alcohol</span>
+                                        <p class="info-desc">Oui</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="info-row">
+                                <div class="h-flex-center">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                    <span class="info-title">Cherche Plus</span>
+                                </div>
+                                <p class="info-desc">Rencontre, Dates</p>
+                            </div>
+                            <div class="info-row">
+                                <div class="h-flex-center">
+                                    <i class="fa-solid fa-user-group"></i>
+                                    <span class="info-title">Genre recherché</span>
+                                </div>
+                                <p class="info-desc">Ouvert, Homme, Femme</p>
+                            </div>
+                    </div>
+                    -->
+                    </div>
+                    <div id="detailsBottom" class="details-bottom">
+                        <a href="#" class="red-link">Voir plus de details sur l'offre <i class="fa-solid fa-chevron-right"></i></a>
+
+                        <!--
+                        <a href="#" class="red-link">Voir le profil de Mohamed Yassine Khabthani <i class="fa-solid fa-chevron-right"></i></a>
+                        -->
                     </div>
                 </div>
                 </div>
@@ -291,6 +377,131 @@
 
         // Optionally, listen for changes in content and scroll accordingly
         scrollableElement.addEventListener("DOMSubtreeModified", scrollToBottom);
+        
+
+        const ellipsisIcon = document.getElementById("collapseDetails");
+        const detailsCol = document.getElementById("detailsColumn");
+        const chatBox = document.getElementById("chatBox");
+        const collapseDetails = document.getElementById("collapseDetails"); // Replace "myLink" with the actual ID of your anchor element
+        const goUp = document.getElementById("goUp"); // Replace "myLink" with the actual ID of your anchor element
+
+
+        if (window.innerWidth >= 992) {
+
+
+            goUp.hidden = true;
+
+        let isCollapsed = false;
+
+        ellipsisIcon.addEventListener('click', () => {
+        isCollapsed = !isCollapsed;
+
+        if (isCollapsed) {
+            detailsCol.classList.add('collapsed');
+            ellipsisIcon.classList.add('active-grey-link');
+            detailsCol.classList.remove('expanded'); // Remove 'expanded' class before collapsing
+            chatBox.style.flexGrow = 2;
+        } else {
+            detailsCol.classList.remove('collapsed');
+            ellipsisIcon.classList.remove('active-grey-link');
+
+            detailsCol.classList.add('expanded'); // Add 'expanded' class before expanding
+            chatBox.style.flexGrow = 1;
+        }
+        });
+
+        }else {
+            goUp.hidden = false;
+
+            // Set the href attribute to a new URL
+            collapseDetails.setAttribute("href", "#detailsColumn");
+        }
+
+
+        window.addEventListener('resize', () => {
+            if (window.innerWidth >= 992) {
+
+
+                goUp.hidden = true;
+
+                let isCollapsed = false;
+
+                ellipsisIcon.addEventListener('click', () => {
+                isCollapsed = !isCollapsed;
+
+                if (isCollapsed) {
+                detailsCol.classList.add('collapsed');
+                ellipsisIcon.classList.add('active-grey-link');
+                detailsCol.classList.remove('expanded'); // Remove 'expanded' class before collapsing
+                chatBox.style.flexGrow = 2;
+                } else {
+                detailsCol.classList.remove('collapsed');
+                ellipsisIcon.classList.remove('active-grey-link');
+
+                detailsCol.classList.add('expanded'); // Add 'expanded' class before expanding
+                chatBox.style.flexGrow = 1;
+                }
+                });
+
+                }else {
+                    if(isCollapsed){
+                        detailsCol.classList.remove('collapsed');
+                ellipsisIcon.classList.remove('active-grey-link');
+
+                detailsCol.classList.add('expanded'); // Add 'expanded' class before expanding
+                chatBox.style.flexGrow = 1;
+                    }
+
+
+                goUp.hidden = false;
+
+                // Set the href attribute to a new URL
+                collapseDetails.setAttribute("href", "#detailsColumn");
+                }
+        });
+
+        const detailsRepas = document.getElementById('detailsRepas');
+        const detailsUser = document.getElementById('detailsUser');
+
+        const detailsContent = document.getElementById('detailsContent');
+        const detailsBottom = document.getElementById('detailsBottom');
+
+                      // define the function to change the HTML content
+        function changeContentRepas() {
+            detailsContent.innerHTML = '<div class=v-flex><span class=meal-time>Lun 26 Fev, 14:00 - Lyon</span><h6 class=meal-type>Dégustation du vin - Le cinéma</h6><span><span class=meal-genre>Famille</span> - <span class=meal-type>Halal</span> </span><img alt="image du repas" class=meal-image src=meal1.png><div class=h-flex-between><span>Il reste encore <span class=meal-count>4 </span>places.</span> <span class=meal-price>20€</span></div><h6>Description du repas</h6><p class=meal-description>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Justo eget magna fermentum iaculis eu. In nisl nisi scelerisque eu ultrices. Magna fermentum iaculis eu non diam phasellus vestibulum lorem. Auctor augue mauris augue neque gravida. Enim nunc faucibus a pellentesque.</div>';
+            detailsBottom.innerHTML = '<a href="#" class="red-link">Voir plus de details sur l"offre <i class="fa-solid fa-chevron-right"></i></a>';
+
+            }
+            // define the function to change the HTML content
+        function changeContentUser() {
+                detailsContent.innerHTML = '<div class=v-flex-center><span>Mohamed Yassine Khabthani</span> <img class=user-pic src="avatar.jpg"><div class=review-stars><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div><div class="h-flex-between social-media-row"><a href=#><i class="fa-brands fa-facebook-f"></i> </a><a href=#><i class="fa-brands fa-instagram"></i> </a><a href=#><i class="fa-brands fa-x-twitter"></i> </a><a href=#><i class="fa-brands fa-linkedin-in"></i></a></div></div><hr><h6>Profil avancé</h6><div class=info-div><div class=info-row><div class=h-flex-center><i class="fa-solid fa-utensils"></i> <span class=info-title>Allergies Alimentaires</span></div><p class=info-desc>Noix (Amandes, Noix de cajou, Noisettes, Noix du brésil, Pistaches, Macadamias, Etc.)</div><div class=info-row><div class=h-flex-center><i class="fa-solid fa-heart"></i> <span class=info-title>Centres d"intérêt</span></div><p class=info-desc>Musique: Ècouter de la musique, jouer d"un instrument de musique, Chanter, Assister à des concerts, Etc.<br>Art: Peinture, sculpture, Dessin, Photographie</div><div class=info-row><div class=h-flex-center><i class="fa-solid fa-language"></i> <span class=info-title>Langues</span></div><p class=info-desc>Français, Anglais, Italien, Espagnole, Chinois</div><div class=info-row><div class=h-flex><div class=h-flex-center><i class="fa-solid fa-smoking"></i> <span class=info-title>Fumeur</span><p class=info-desc>Oui</div><div class=h-flex-center><i class="fa-solid fa-wine-glass"></i> <span class=info-title>Alcohol</span><p class=info-desc>Oui</div></div></div><div class=info-row><div class=h-flex-center><i class="fa-solid fa-magnifying-glass"></i> <span class=info-title>Cherche Plus</span></div><p class=info-desc>Rencontre, Dates</div><div class=info-row><div class=h-flex-center><i class="fa-solid fa-user-group"></i> <span class=info-title>Genre recherché</span></div><p class=info-desc>Ouvert, Homme, Femme</div></div>';
+                detailsBottom.innerHTML = '<a href="#" class="red-link">Voir le profil de Mohamed Yassine Khabthani <i class="fa-solid fa-chevron-right"></i></a>';
+
+            }   
+            detailsRepas.addEventListener('click', changeContentRepas);
+            detailsUser.addEventListener('click', changeContentUser);
+
+            // Get the container element
+            var btnContainer = document.getElementById("link-container");
+
+            // Get all buttons with class="btn" inside the container
+            var btns = btnContainer.getElementsByClassName("grey-link");
+
+            // Loop through the buttons and add the active class to the current/clicked button
+            for (var i = 0; i < btns.length; i++) {
+            btns[i].addEventListener("click", function() {
+                var current = document.getElementsByClassName("active-grey-link");
+
+                // If there's no active class
+                if (current.length > 0) {
+                current[0].className = current[0].className.replace(" active-grey-link", "");
+                }
+
+                // Add the active class to the current/clicked button
+                this.className += " active-grey-link";
+            });
+            }
+        
     </script>
 
 

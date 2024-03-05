@@ -446,7 +446,8 @@ body {
 .grey-link:hover{
     color: rgba(0, 0, 0, 0.8);
 }
-.grey-link:focus{
+
+.active-grey-link{
     color: rgba(0, 0, 0, 0.8);
 }
 .meal-add{
@@ -630,13 +631,10 @@ dropdown menu
 }
 .messages-column{
     height: calc(100vh - 81px);
-    
+    display: flex;
+    flex-direction: column;
 }
-.recieved-messages-column{
-    height: 90%;
-    overflow-y: scroll;
 
-}
 
 .messages-title{
     padding: 25px 20px;
@@ -697,6 +695,7 @@ dropdown menu
 .chatbox-title{
     padding: 13.5px 20px;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    padding-right: 40px;
 
 }
 .chatbox-title img{
@@ -757,6 +756,18 @@ dropdown menu
     background-color: rgba(230,28,76,0.07);
     border: 0.5px solid rgba(0, 0, 0, 0.2);
     border-radius: 10px 10px 0px 10px;
+    display: inline-block;
+    float: right;
+
+  }
+  .chatbox .recipient-message{
+    display: inline-block;
+    padding: 15px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    border: 0.5px solid rgba(0, 0, 0, 0.2);
+    border-radius: 10px 10px 10px 0px;
+    float: left;
   }
   .chatbox .sender{
     font-size: 14px;
@@ -764,13 +775,7 @@ dropdown menu
     margin-right: 5px;
     font-weight: 500;
   }
-  .chatbox .recipient-message{
-    padding: 15px;
-    margin-bottom: 20px;
-    background-color: #fff;
-    border: 0.5px solid rgba(0, 0, 0, 0.2);
-    border-radius: 10px 10px 10px 0px;
-  }
+
 
   .chatbox .send-time{
     font-size: 14px;
@@ -784,6 +789,7 @@ dropdown menu
   .details-title{
     padding: 25px 20px;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    padding-right: 40px;
 }
     .details-title h6{
     margin-right: 25px;
@@ -793,11 +799,77 @@ dropdown menu
         flex:1;
         overflow-y: scroll;
         padding: 20px;
+        margin-right: 14px;
+
     }
+    .details-content .v-flex > *{
+        margin-bottom: 15px;
+    }
+    .details-content .v-flex-center > *{
+        margin-bottom: 15px;
+    }
+    .details-content .meal-image{
+        height: 180px;
+        object-fit: cover;
+        width: 100%;
+        border-radius: 10px;
+    }
+    .details-content .meal-time{
+        font-size: 14px;
+        color: rgba(0,0,0,0.6);
+    }
+    .details-content .h-flex-between span {
+        font-size: 15px;
+    }
+    .details-content .meal-description{
+        font-size: 14px;
+        color: rgba(0,0,0,0.6);
+    }
+    .details-content .meal-price{
+
+        font-weight: 500;
+    }
+
+    .details-content .user-pic{
+        width: 118px;
+        height: 118px;
+        border-radius: 59px;
+        object-fit: cover;
+    }
+    .details-content .review-stars i{
+        font-size: 16px;
+    }
+    .details-content .social-media-row{
+        padding: 0 80px;
+    }
+    .details-content .info-div{
+        padding: 0;
+        box-shadow: none;
+        margin-top: 15px;
+
+    }
+
+
     .details-bottom{
-        padding: 20px;
+        text-align: center;
+        padding:30px 20px;
         background-color: #fff;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
         }
+        
+
+
+        #detailsColumn.collapsed{
+            margin-right: 10px;
+        }
+        .collapsed {
+            width: 0;
+            transition: width 0.3s ease-in-out; /* Animation for collapsing */
+          }
+          
+          .expanded {
+            transition: width 0.3s ease-out; /* Animation for expanding */
+          }
 /*--------- /CHAT ------------*/
 
 
